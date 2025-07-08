@@ -1,9 +1,9 @@
-import MovieCard from './components/movieCard';
-
+import Home from "./pages/home";
+import "./App.css"
 function App() {
   return (
-    <div>
-      <MovieCard url="url" title="title" relase_date='2002' />
+    <div className="App">
+      <Home/>
     </div>
   );
 }

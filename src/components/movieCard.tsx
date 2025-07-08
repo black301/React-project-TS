@@ -1,11 +1,11 @@
-
-interface moive{
+interface movie{
     url:string;
     title:string;
-    relase_date:string;
+    release_date:string;
 }
 
-function movieCard({url,title,relase_date}:moive) {
+function MovieCard({url,title,release_date}:movie) {
+  
   function favClick(){
     console.log("i hate react")
   }
@@ -24,11 +24,11 @@ function movieCard({url,title,relase_date}:moive) {
         </div>
         <div className="moive info">
         <h3>{title}</h3>
-        <p>{relase_date}</p>
+        <p>{release_date}</p>
         </div>
       </div>
     </>
   );
 }
 
-export default movieCard;
+export default MovieCard;
