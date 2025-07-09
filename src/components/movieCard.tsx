@@ -1,7 +1,6 @@
 import "../css/MovieCard.css";
 import { useMovieContext } from "../contexts/MovieContext";
 import type { Movie } from "../Services/api";
-import type { MouseEventHandler } from "react";
 
 function MovieCard({id, poster_path, title, release_date }: Movie) {
   const { isfav, AddToFavs, rmfavs } = useMovieContext();
