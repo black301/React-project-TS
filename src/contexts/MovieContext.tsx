@@ -1,6 +1,5 @@
 import { createContext,useState,useContext,useEffect, type ReactNode  } from "react";
 import type { Movie } from "../Services/api";
-import Favorites from "../pages/Favorites";
 
 interface MovieContextType {
   favs: Movie[];
@@ -14,7 +13,13 @@ const MovieContext = createContext<MovieContextType | undefined>(undefined);
 
 
 
-export const useMovieContext = ()=>useContext(MovieContext)
+export const useMovieContext = () => {
+  const context = useContext(MovieContext);
+  if (!context) {
+    throw new Error("useMovieContext must be used inside a MovieProvider");
+  }
+  return context;
+};
 
 export const MovieProvider =({children}: { children: ReactNode })=>{
    const [favs,setfavs]= useState<Movie[]>([])
