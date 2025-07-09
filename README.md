@@ -1,69 +1,41 @@
-# React + TypeScript + Vite
+This is a small project I built out of curiosity in just two days  
+using **React + TypeScript**.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 📌 About
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I already had a solid background in JavaScript,  
+so I watched two videos to get started:
 
-## Expanding the ESLint configuration
+- 📺 **Intro to TypeScript** — basic but helped me understand TypeScript better:  
+  [Watch it here](
+https://www.youtube.com/watch?v=SqcY0GlETPk)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 📺 **Original project idea in JS + React** — I rebuilt it myself in **TypeScript + React**  
+  to make sure I wasn’t just copying but actually understood it:  
+  [Watch it here](https://www.youtube.com/watch?v=G6D9cBaLViA&t=3969s)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+I used this free movie API for the data:  
+👉 [TMDB API](https://www.themoviedb.org/)
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🚀 How the project works
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Search for movies from the API.
+- Add movies to your favorites.
+- View your favorite list.
+- Uses **React Router** for simple page navigation.
+- Built with **Vite** for fast dev and build.
+- Deployed to **GitHub Pages** using `gh-pages`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🌐 Live Demo
+
+👉 [Check it out here](https://black301.github.io/React-project-TS/)
+
+---
+
+**Thanks for checking it out — enjoy React! 🚀**
