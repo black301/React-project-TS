@@ -1,33 +1,28 @@
-interface movie{
-    url:string;
-    title:string;
-    release_date:string;
-}
+import "../css/MovieCard.css";
+import type  {Movie}  from "../Services/api";
 
-function MovieCard({url,title,release_date}:movie) {
-  
-  function favClick(){
-    console.log("i hate react")
+
+
+function MovieCard({ poster_path, title, release_date }: Movie) {
+  function favClick() {
+    console.log("i hate react");
   }
-  
-  
+
   return (
-    <>
-      <div className="moive-card">
-        <div className="moive-poster">
-          <img src={url} alt={title}></img>
-          <div className="moive-overlay">
-            <button onClick={favClick} className="favorite-btn">
-              💀
-            </button>
-          </div>
-        </div>
-        <div className="moive info">
-        <h3>{title}</h3>
-        <p>{release_date}</p>
+    <div className="movie-card">
+      <div className="movie-poster">
+        <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={title}></img>
+        <div className="movie-overlay">
+          <button onClick={favClick} className="favorite-btn">
+            💀
+          </button>
         </div>
       </div>
-    </>
+       <div className="movie-info">
+        <h3>{title}</h3>
+        <p>{release_date?.split("-")[0]}</p>
+      </div>
+    </div>
   );
 }
 
